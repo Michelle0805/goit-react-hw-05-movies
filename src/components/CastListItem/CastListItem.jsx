@@ -1,7 +1,8 @@
 
 import PropTypes from 'prop-types';
+import css from './CastListItem.module.css';
 
-export const CastListItem = ({ profilePath, originalName, name }) => {
+export const CastListItem = ({ profilePath, originalName, name, character }) => {
   return (
     <li>
       <img
@@ -14,7 +15,8 @@ export const CastListItem = ({ profilePath, originalName, name }) => {
         }
         alt={originalName}
       />
-      <p>{name}</p>
+      <p className={css.castListItem}>{name}</p>
+      <p className={css.castListItem}>{character}</p>
     </li>
   );
 };

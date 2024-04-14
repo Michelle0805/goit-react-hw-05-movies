@@ -9,18 +9,20 @@ const MovieDetailsPage = () => {
   const { movieId } = useParams();
   const [movieDetails, setMovieDetails] = useState(null);
   const location = useLocation();
-  const backLink = location.state?.from ?? '/movies';
+  const backLink = location.state?.from ?? '/goit-react-hw-05-movies/movies';
 
-  const fetchDetails = async () => {
-    try {
-      const movie = await fetchMovieDetails(movieId);
-      setMovieDetails(movie);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  
 
   useEffect(() => {
+    const fetchDetails = async () => {
+      try {
+        const movie = await fetchMovieDetails(movieId);
+        setMovieDetails(movie);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    
     fetchDetails();
   }, [movieId]);
 

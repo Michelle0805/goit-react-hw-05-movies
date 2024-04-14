@@ -9,7 +9,7 @@ export const MovieListItem = ({ id, title }) => {
   return (
     <li className={css.movieItem} key={id}>
       <Link
-        to={`/movies/${id}`}
+        to={`/goit-react-hw-05-movies/movies/${id}`}
         state={{ from: location }}
         className={css.movieLink}
       >

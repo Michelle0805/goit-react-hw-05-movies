@@ -1,12 +1,13 @@
 /* Header.module.css */
 .header {
-    background-color: #f0f0f0;
+    background-color: hsl(211, 71%, 59%);
     padding: 20px;
   }
   
   .nav {
     display: flex;
     justify-content: space-around;
+    font-size: larger;
   }
   
   .link {
