@@ -31,7 +31,7 @@ const MoviesPage = () => {
           navigate('/not-found', { replace: true });
           return;
         }
-        console.log('movies', movies);
+        // console.log('movies', movies);
         setMovies(movies);
         setIsLoading(false);
       } catch (error) {
@@ -41,7 +41,7 @@ const MoviesPage = () => {
     };
 
     fetchMovies();
-  }, [movieName]);
+  }, [movieName, navigate]);
 
   return (
     <div>
